@@ -1,0 +1,22 @@
+[project]
+name = "torch-mpsradeon-python"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Emilio Dalla Torre", email = "info@emiliodallatorre.it" }
+]
+requires-python = "==3.10.*"
+dependencies = [
+    "numpy<2",
+    "torch==2.2.2",
+    "torchaudio==2.2.2",
+    "torchvision==0.17.2",
+]
+
+[project.scripts]
+torch-mpsradeon-python = "torch_mpsradeon_python:main"
+
+[build-system]
+requires = ["uv_build>=0.12.17,<0.13.0"]
+build-backend = "uv_build"
