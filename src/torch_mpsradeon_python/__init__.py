@@ -1,2 +1,11 @@
+import torch
+
+
 def main() -> None:
-    print("Hello from torch-mpsradeon-python!")
+    if torch.backends.mps.is_available():
+        mps_device = torch.device("mps")
+        x = torch.ones(1, device=mps_device)
+        print("Hello from MPS!")
+        print(x)
+    else:
+        print("MPS device not found.")
